@@ -83,4 +83,16 @@ public class List<T> {
     public boolean empty() {
         return length == 0;
     }
+    public void insert(T data) {
+        Node<T> node = new Node<>(data);
+        if (head == null){
+            head = node;
+            end = node;
+        }
+        else {
+            end.nextElem = node;
+            end = node;
+        }
+        ++length;
+    }
 }
