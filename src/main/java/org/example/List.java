@@ -101,4 +101,20 @@ public class List<T> {
         ++length;
     }
 
+    /**
+     * Добавление элемента в начало списка
+     * @param data добавляемый элемент
+     */
+    public void addFirst(T data) {
+        Node<T> node = new Node<>(data);
+        if (head == null) {
+            head = node;
+            end = node;
+        }
+        else {
+            node.nextElem = head;
+            head = node;
+        }
+        ++length;
+    }
 }
