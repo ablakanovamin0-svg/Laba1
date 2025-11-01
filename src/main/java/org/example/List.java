@@ -144,4 +144,13 @@ public class List<T> {
         }
         --length;
     }
+
+    /**
+     * Очистка списка
+     */
+    public void clearList() {
+        head = null;
+        end = null;
+        length = 0;
+    }
 }
