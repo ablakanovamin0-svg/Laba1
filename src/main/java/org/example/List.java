@@ -153,4 +153,20 @@ public class List<T> {
         end = null;
         length = 0;
     }
+
+    /**
+     * Поиск элемента по индексу в списке
+     * @param data искомый элемент в списке
+     * @return true, если элемент найден в списке, иначе возвращает falseо
+     */
+    public boolean searchForElem(T data) {
+        Node<T> node = head;
+        while (node != null) {
+            if (Objects.equals(node.elem, data)) {
+                return true;
+            }
+            node = node.nextElem;
+        }
+        return false;
+    }
 }
