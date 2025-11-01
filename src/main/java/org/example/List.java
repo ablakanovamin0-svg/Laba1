@@ -68,4 +68,12 @@ public class List<T> {
         return end.elem;
     }
 
+    /**
+     * Получение количества элементов списка
+     * @return количество элементов текущего объекта
+     */
+    public int getLength() {
+         return length;
+    }
+
 }
