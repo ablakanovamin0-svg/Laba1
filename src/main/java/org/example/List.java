@@ -56,4 +56,16 @@ public class List<T> {
         return node.elem;
     }
 
+    /**
+     * Получение элемента с конца списка
+     * @return последнийтвэлемента списка
+     * @throws IllegalStateException, если список пуст
+     */
+    public T getLast() {
+        if (end == null) {
+            throw new IllegalStateException();
+        }
+        return end.elem;
+    }
+
 }
