@@ -39,4 +39,21 @@ public class List<T> {
         end = null;
         length = 0;
     }
+
+    /**
+     * Получение элемента по индексу
+     * @param index индекс получаемого элемента
+     * @return
+     */
+    public T getElem(int index) {
+        if (index < 0 || index >= length) {
+            throw new IndexOutOfBoundsException();
+        }
+        Node<T> node = head;
+        for (int i = 0; i < index; i++) {
+            node = node.nextElem;
+        }
+        return node.elem;
+    }
+
 }
