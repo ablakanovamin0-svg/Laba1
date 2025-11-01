@@ -117,4 +117,31 @@ public class List<T> {
         }
         ++length;
     }
+
+    /**
+     * Удаление элемента по индексу из списка
+     * @param index индекс удаляемого элемента
+     */
+    public void deleteElem(int index) {
+        if (index < 0 || index >= length) {
+            throw new IndexOutOfBoundsException();
+        }
+        if (index == 0) {
+            head = head.nextElem;
+            if (head == null) {
+                end = null;
+            }
+        }
+        else {
+            Node<T> node = head;
+            for (int i = 0; i < index; i++) {
+                node = node.nextElem;
+            }
+            if (node.nextElem == end) {
+                end = node;
+            }
+            node.nextElem = node.nextElem.nextElem;
+        }
+        --length;
+    }
 }
