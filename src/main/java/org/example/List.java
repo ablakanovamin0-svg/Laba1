@@ -76,4 +76,11 @@ public class List<T> {
          return length;
     }
 
+    /**
+     * Проверка списка на пустоту
+     * @return true, если список пуст, иначе возвращает false
+     */
+    public boolean empty() {
+        return length == 0;
+    }
 }
