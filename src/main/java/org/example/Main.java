@@ -1,17 +1,33 @@
 package org.example;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+/**
+ * Класс для показа функционала объектов созданного контейнера List
+ */
 public class Main {
+    /**
+     * Показ функционала методов класса List
+     */
     static void main() {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        IO.println(String.format("Hello and welcome!"));
-
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            IO.println("i = " + i);
-        }
+        List<Integer> intList = new List<>();
+        System.out.println("Вывод списка: " + intList);
+        System.out.println("Размер списка: " + intList.getLength());
+        System.out.println("Проверка списка на пустоту: " + intList.empty());
+        intList.insert(3);
+        System.out.println("Добавление элемента 3 в конец пустого списка: " + intList);
+        intList.insertFirst(4);
+        System.out.println("Добавление элемента 4 в начало списка: " + intList);
+        System.out.println("Размер списка: " + intList.getLength());
+        intList.insert(5);
+        System.out.println("Добавление элемента 5 в конец списка: " + intList);
+        System.out.println("Размер списка: " + intList.getLength());
+        System.out.println("Проверка списка на пустоту: " + intList.empty());
+        System.out.println("Элемент под индексом 2: " + intList);
+        intList.deleteElem(1);
+        System.out.println("Удаление элемента под индексом 1: " + intList);
+        System.out.println("Размер списка: " + intList.getLength());
+        System.out.println("Поиск элемента 4: " + intList.searchForElem(4));
+        System.out.println("Поиск элемента 2: " + intList.searchForElem(2));
+        intList.clearList();
+        System.out.println("Список после очистки: " + intList);
     }
 }

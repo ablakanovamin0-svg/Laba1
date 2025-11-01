@@ -43,7 +43,7 @@ public class List<T> {
     /**
      * Получение элемента по индексу
      * @param index индекс получаемого элемента
-     * @return
+     * @return элемент списка на позиции, соответвующей введённому индексу
      */
     public T getElem(int index) {
         if (index < 0 || index >= length) {
@@ -105,7 +105,7 @@ public class List<T> {
      * Добавление элемента в начало списка
      * @param data добавляемый элемент
      */
-    public void addFirst(T data) {
+    public void insertFirst(T data) {
         Node<T> node = new Node<>(data);
         if (head == null) {
             head = node;
@@ -134,7 +134,7 @@ public class List<T> {
         }
         else {
             Node<T> node = head;
-            for (int i = 0; i < index; i++) {
+            for (int i = 0; i < index - 1; i++) {
                 node = node.nextElem;
             }
             if (node.nextElem == end) {
@@ -180,6 +180,9 @@ public class List<T> {
         Node<T> node = head;
         while (node != null) {
             result += node.elem;
+            if (node.nextElem != null) {
+                result += " ";
+            }
             node = node.nextElem;
         }
         return result;
