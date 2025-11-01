@@ -2,6 +2,8 @@ package org.example;
 
 /**
  * Класс для показа функционала объектов созданного контейнера List
+ * @author ablakanovamin0-svg
+ * @version 1.0
  */
 public class Main {
     /**
