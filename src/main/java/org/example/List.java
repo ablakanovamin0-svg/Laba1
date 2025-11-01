@@ -83,6 +83,11 @@ public class List<T> {
     public boolean empty() {
         return length == 0;
     }
+
+    /**
+     * Добавление элемента в конец списка
+     * @param data добавляемый элемент
+     */
     public void insert(T data) {
         Node<T> node = new Node<>(data);
         if (head == null){
@@ -95,4 +100,5 @@ public class List<T> {
         }
         ++length;
     }
+
 }
