@@ -169,4 +169,19 @@ public class List<T> {
         }
         return false;
     }
+
+    /**
+     * Преобразования списка в строковый формат для вывода
+     * @return строку из элементов списка
+     */
+    @Override
+    public String toString() {
+        String result = "";
+        Node<T> node = head;
+        while (node != null) {
+            result += node.elem;
+            node = node.nextElem;
+        }
+        return result;
+    }
 }
